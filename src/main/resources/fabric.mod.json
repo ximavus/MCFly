@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "fly",
+	"version": "${version}",
+	"name": "fly",
+	"description": "Hacks for anarchy servers! Pls not abuse",
+	"authors": [
+		"ximavus"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/fly/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"name.modid.Fly"
+		],
+		"client": [
+			"name.modid.FlyClient"
+		]
+	},
+	"mixins": [
+		"fly.mixins.json",
+		{
+			"config": "fly.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.13",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-key-binding-api-v1": "*",
+		"fabric-renderer-api-v1": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
